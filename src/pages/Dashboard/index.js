@@ -1,16 +1,9 @@
 import React, { useEffect } from 'react';
 import fire from '~/services/fire';
 
-import {
-  Title,
-  Form,
-  Label,
-  Select,
-  Position,
-  PositionOne,
-  PositionTwo,
-  PositionThree,
-} from './styles';
+import CardPosition from '~/components/CardPosition';
+
+import { Title, Form, Label, Select } from './styles';
 
 function Dashboard() {
   useEffect(() => {
@@ -22,13 +15,11 @@ function Dashboard() {
         profile_picture: 'imageUrl',
         valor: 100,
       }); */
-    const user = fire.auth().uid;
-    console.tron.log('uid: ', user);
   }, []);
 
   return (
     <div>
-      <Title>Matchs</Title>
+      <Title>Dashboard</Title>
       <Form>
         <Label>Month</Label>
         <div className="relative">
@@ -47,13 +38,11 @@ function Dashboard() {
             <option>December</option>
           </Select>
         </div>
-        <span className="" />
+        <span className="pt-8" />
 
-        <Position>
-          <PositionOne />
-          <PositionTwo />
-          <PositionThree />
-        </Position>
+        <CardPosition position="1º position" name="William" pointing="2345" />
+        <CardPosition position="2º position" name="Guilherme" pointing="2345" />
+        <CardPosition position="3º position" name="Thiago" pointing="2345" />
       </Form>
     </div>
   );

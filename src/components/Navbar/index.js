@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 // import { HeaderBar } from './styles';
 
 export default function Navbar() {
@@ -42,24 +44,18 @@ export default function Navbar() {
       <nav
         className={isOpen ? 'block' : 'hidden px-2 pt-2 pb-4 sm:flex sm:p-0'}
       >
-        <a
-          href="/"
+        <Link
+          to="/"
           className="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
         >
-          List your property
-        </a>
-        <a
-          href="/"
-          className="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
+          Dashboard
+        </Link>
+        <Link
+          to="/matchs"
+          className="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800"
         >
-          Trips
-        </a>
-        <a
-          href="/"
-          className="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2"
-        >
-          Messages
-        </a>
+          Matchs
+        </Link>
       </nav>
     </header>
   );

@@ -4,12 +4,8 @@ export const Title = styled.div.attrs({
   className: 'text-3xl pt-4 text-gray-200 pb-4',
 })``;
 
-export const Form = styled.div.attrs({
-  className: 'bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4',
-})``;
-
-export const Label = styled.div.attrs({
-  className: 'block text-gray-200 text-sm font-bold mb-2',
+export const Match = styled.div.attrs({
+  className: 'text-gray-200 text-lg font-bold pt-4 px-4',
 })``;
 
 export const Input = styled.input.attrs({

@@ -20,16 +20,17 @@ export function* signIn({ payload }) {
     const token = fire.auth().accessToken;
     const user = fire.auth().uid;
 
-    console.tron.warn('token', token);
+    console.log('token', token);
+    console.log('user', user);
 
-    // api.defaults.headers.Authorization = `Bearer ${token}`;
+    api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
 
     history.push('/dashboard');
   } catch (err) {
     toast.error('Falha na autentição, verifique seus dados');
-    console.tron.warn('error catch', err);
+    console.log('error catch', err);
     yield put(signFailure());
   }
 }
