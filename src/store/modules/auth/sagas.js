@@ -10,18 +10,13 @@ import { signInSuccess, signFailure } from './actions';
 export function* signIn({ payload }) {
   try {
     const { email, password } = payload;
-    fire
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch(function(error) {
-        console.tron.warn('error catch', error);
-      });
+    fire.auth().signInWithEmailAndPassword(email, password);
+    /* .catch(function(error) {
+        console.tron.log('error catch', error);
+      }); */
 
     const token = fire.auth().accessToken;
     const user = fire.auth().uid;
-
-    console.log('token', token);
-    console.log('user', user);
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
@@ -30,23 +25,20 @@ export function* signIn({ payload }) {
     history.push('/dashboard');
   } catch (err) {
     toast.error('Falha na autentição, verifique seus dados');
-    console.log('error catch', err);
+    // console.tron.log('error catch', err);
     yield put(signFailure());
   }
 }
 
 export function* signUp({ payload }) {
   try {
-    const { name, email, password, password_confirmation } = payload;
+    const { email, password } = payload;
 
-    console.tron.log(name, password_confirmation);
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch(function(error) {
+    fire.auth().createUserWithEmailAndPassword(email, password);
+    /* .catch(function(error) {
         console.tron.log('error code', error.code);
         console.tron.log('error message', error.message);
-      });
+      }); */
 
     // yield call(api.post, 'users', {
     //   name,
@@ -58,7 +50,7 @@ export function* signUp({ payload }) {
     history.push('/');
   } catch (err) {
     toast.error('Falha no cadastro, verifique seus dados');
-    console.tron.log('error', err);
+    // console.tron.log('error', err);
     yield put(signFailure());
   }
 }

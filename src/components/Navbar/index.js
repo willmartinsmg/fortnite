@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
-  console.tron.log(isOpen);
-
   let path;
 
   if (isOpen) {

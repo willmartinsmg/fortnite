@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 import fire from '~/services/fire';
 
 import CardPosition from '~/components/CardPosition';
@@ -19,7 +21,12 @@ function Dashboard() {
 
   return (
     <div>
-      <Title>Dashboard</Title>
+      <div className="flex items-center justify-between">
+        <Title>Dashboard</Title>
+        <Link to="formmatch">
+          <AddCircleIcon fontSize="large" color="primary" />
+        </Link>
+      </div>
       <Form>
         <Label>Month</Label>
         <div className="relative">

@@ -16,7 +16,12 @@ export default function Routes() {
 
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/matchs" component={Matchs} isPrivate />
-      <Route path="/formmatch" component={FormMatch} isPrivate />
+      <Route path="/formmatch" component={FormMatch} isPrivate exact />
+      <Route
+        path="/formmatch/:year/:month/:match"
+        component={FormMatch}
+        isPrivate
+      />
     </Switch>
   );
 }
