@@ -11,7 +11,7 @@ export default function CardMatch({ route, match, damageG, damageT, damageW }) {
           Match: {match}
         </div>
         <div className="relative text-gray-200 p-4">
-          <table className="table-auto items-center">
+          <table className="table-auto items-center w-full text-center">
             <thead>
               <tr>
                 <th className="px-4 py-2">Guilherme</th>

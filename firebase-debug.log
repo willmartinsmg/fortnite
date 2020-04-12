@@ -1,0 +1,60 @@
+[debug] [2020-04-12T22:21:25.613Z] ----------------------------------------------------------------------
+[debug] [2020-04-12T22:21:25.623Z] Command:       /home/will/.nvm/versions/node/v12.16.2/bin/node /home/will/.nvm/versions/node/v12.16.2/bin/firebase deploy
+[debug] [2020-04-12T22:21:25.623Z] CLI Version:   8.0.2
+[debug] [2020-04-12T22:21:25.624Z] Platform:      linux
+[debug] [2020-04-12T22:21:25.624Z] Node Version:  v12.16.2
+[debug] [2020-04-12T22:21:25.625Z] Time:          Sun Apr 12 2020 19:21:25 GMT-0300 (Brasilia Standard Time)
+[debug] [2020-04-12T22:21:25.626Z] ----------------------------------------------------------------------
+[debug] [2020-04-12T22:21:25.630Z] 
+[debug] [2020-04-12T22:21:25.656Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-12T22:21:25.657Z] > authorizing via signed-in user
+[debug] [2020-04-12T22:21:25.658Z] [iam] checking project fortnite-cb8de for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-12T22:21:25.673Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fortnite-cb8de:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-04-12T22:21:27.073Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Apr 2020 22:21:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=853","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-12T22:21:27.077Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fortnite-cb8de  
+ 
+[debug] [2020-04-12T22:21:28.574Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Apr 2020 22:21:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'fortnite-cb8de'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-04-12T22:21:28.587Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/fortnite-cb8de/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-04-12T22:21:30.550Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Apr 2020 22:21:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[fortnite-cb8de]: beginning deploy...
+[info] i  hosting[fortnite-cb8de]: found 30 files in build
+[debug] [2020-04-12T22:21:31.254Z] [hosting] hash cache [YnVpbGQ] stored for 30 files
+[debug] [2020-04-12T22:21:31.254Z] [hosting][hash queue][FINAL] {"max":671,"min":36,"avg":71.5,"active":0,"complete":30,"success":30,"errored":0,"retried":0,"total":30,"elapsed":686}
+[debug] [2020-04-12T22:21:31.255Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/fortnite-cb8de/versions/73990bd930697464:populateFiles  
+ <request body omitted>
+[debug] [2020-04-12T22:21:34.714Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Apr 2020 22:21:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-12T22:21:34.723Z] [hosting][populate queue][FINAL] {"max":3465,"min":3465,"avg":3465,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":3471}
+[debug] [2020-04-12T22:21:34.723Z] [hosting] uploads queued: 8
+[debug] [2020-04-12T22:21:38.106Z] [hosting][upload queue][FINAL] {"max":3391,"min":2461,"avg":2698.875,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":3391}
+[info] ✔  hosting[fortnite-cb8de]: file upload complete
+[debug] [2020-04-12T22:21:38.110Z] [hosting] deploy completed after 7558ms
+[debug] [2020-04-12T22:21:38.288Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "fortnite-cb8de"
+    },
+    "site": "fortnite-cb8de",
+    "version": "sites/fortnite-cb8de/versions/73990bd930697464"
+  }
+]
+[info] i  hosting[fortnite-cb8de]: finalizing version...
+[debug] [2020-04-12T22:21:38.290Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/fortnite-cb8de/versions/73990bd930697464?updateMask=status  
+ {"status":"FINALIZED"}

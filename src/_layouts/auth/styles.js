@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-export const Content = styled.div`
+export const Content = styled.div.attrs({
+  className: 'text-gray-200',
+})`
   width: 100%;
   max-width: 315px;
   text-align: center;
@@ -48,7 +50,6 @@ export const Content = styled.div`
     }
 
     a {
-      color: #000;
       margin-top: 15px;
       font-size: 16px;
       opacity: 0.8;
@@ -60,42 +61,11 @@ export const Content = styled.div`
   }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div.attrs({
+  className: 'bg-gray-800',
+})`
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(241, 231, 103, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(254, 182, 69, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(241, 231, 103, 1)),
-    color-stop(100%, rgba(254, 182, 69, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(254, 182, 69, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(254, 182, 69, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(254, 182, 69, 1) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(241, 231, 103, 1) 0%,
-    rgba(254, 182, 69, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
 `;
