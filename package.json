@@ -16,7 +16,7 @@
     "classed-components": "^1.0.1",
     "firebase": "^7.14.0",
     "history": "^4.10.1",
-    "immer": "^5.3.5",
+    "immer": "^9.0.6",
     "polished": "^3.4.4",
     "postcss-cli": "^7.1.0",
     "prop-types": "^15.7.2",
